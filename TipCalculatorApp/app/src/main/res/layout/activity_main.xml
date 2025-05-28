@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Base amount label -->
+    <TextView
+        android:id="@+id/labelBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Base"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Base amount input -->
+    <EditText
+        android:id="@+id/editTextBase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Enter base amount"
+        app:layout_constraintStart_toEndOf="@id/labelBase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelBase"
+        android:ems="10" />
+
+    <!-- Tip percentage label -->
+    <TextView
+        android:id="@+id/labelTipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip %"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextBase"
+        android:layout_marginTop="24dp" />
+
+    <!-- Tip percentage value -->
+    <TextView
+        android:id="@+id/textViewTipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/labelTipPercent"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelTipPercent"
+        android:layout_marginStart="8dp" />
+
+    <!-- SeekBar for tip percentage -->
+    <SeekBar
+        android:id="@+id/seekBarTip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelTipPercent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Tip amount label -->
+    <TextView
+        android:id="@+id/labelTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBarTip"
+        android:layout_marginTop="24dp" />
+
+    <!-- Tip amount value -->
+    <TextView
+        android:id="@+id/textViewTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/labelTipAmount"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelTipAmount"
+        android:layout_marginStart="8dp" />
+
+    <!-- Total amount label -->
+    <TextView
+        android:id="@+id/labelTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelTipAmount"
+        android:layout_marginTop="24dp" />
+
+    <!-- Total amount value -->
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/labelTotal"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelTotal"
+        android:layout_marginStart="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
